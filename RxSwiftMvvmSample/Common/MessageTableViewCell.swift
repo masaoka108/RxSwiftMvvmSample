@@ -10,11 +10,11 @@ import UIKit
 
 class MessageTableViewCell: UITableViewCell {
     
-    var nameLabel:UILabel!
-    var iconImage:UIImage!
-    var iconImageView:UIImageView!
+//    var nameLabel:UILabel!
+//    var iconImage:UIImage!
+//    var iconImageView:UIImageView!
     var messageLabel:UILabel!
-    var sendDateLable:UILabel!
+//    var sendDateLable:UILabel!
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:)")
@@ -27,9 +27,14 @@ class MessageTableViewCell: UITableViewCell {
         
         //******** メッセージ
         messageLabel = UILabel()
-        messageLabel.frame = CGRect(x:0 ,y:0, width:screenRect.width, height: 15)
+        messageLabel.frame = CGRect(x:0 ,y:0, width:screenRect.width, height: 20)
         messageLabel.numberOfLines = 0
         messageLabel.lineBreakMode = .byWordWrapping
         contentView.addSubview(messageLabel)
+        
+        //constraint (ラベルのheightを可変にする為に必要)
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(item: messageLabel, attribute:.top, relatedBy:.equal, toItem:contentView, attribute:.top , multiplier:1, constant:20).isActive = true
+        NSLayoutConstraint(item: messageLabel, attribute:.bottomMargin, relatedBy:.equal, toItem:contentView, attribute:.bottomMargin, multiplier:1, constant:0).isActive = true
     }
 }

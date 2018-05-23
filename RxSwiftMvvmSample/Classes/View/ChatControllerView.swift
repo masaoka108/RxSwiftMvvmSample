@@ -112,10 +112,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITextViewDeleg
                     
                     if (message.count == 20) {
                         //1ページしか表示していない場合は始めの表示なので一番下までスクロールする
-                        self.messageTableView.scrollToRow(at: IndexPath(row: message.count - 1, section: 0), at: UITableViewScrollPosition.bottom, animated: false)
+                        self.messageTableView.scrollToRow(at: IndexPath(row: message.count - 1, section: 0), at: UITableViewScrollPosition.bottom, animated: true)
+
                     } else if(message.count % 20 == 0) {
                         //1ページ以上なら最新より１ページ前を表示(row:20だと上手く表示されないので調整した)
-                        self.messageTableView.scrollToRow(at: IndexPath(row: 33, section: 0), at: UITableViewScrollPosition.bottom, animated: false)
+                        self.messageTableView.scrollToRow(at: IndexPath(row: 20, section: 0), at: UITableViewScrollPosition.top, animated: false)
                     }
                 }
                 //ActivityIndicator.stopAnimating()

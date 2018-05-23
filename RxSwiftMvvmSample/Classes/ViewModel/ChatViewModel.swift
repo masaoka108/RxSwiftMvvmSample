@@ -35,7 +35,7 @@ class ChatViewModel {
         dataMessageRx = messageModel.messagesRx()
         
         //スクロール 上まで到達した時
-        // subscribe はイベントの購読を行う（＝ここで受信する）
+        // subscribe はイベントの購読を行う。（＝ここで受信する）driveはsubscriveと同等(?)
         scrollEndComing.asDriver()
             .drive(onNext: { bool in
                 if (bool) {
@@ -56,10 +56,12 @@ class ChatViewModel {
         
     }
     
+    //メッセージデータの追加
     func addMessage(msg:String) {
         messageModel.add(msg: msg)
     }
-    
+
+    //現在表示しているデータ数を取得
     func getDataCount() -> Int {
         return (messageModel.data?.count)! - 1
     }
