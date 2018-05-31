@@ -6,14 +6,6 @@
 //  Copyright © 2018年 岡村. All rights reserved.
 //
 
-//
-//  CommonViewModel.swift
-//  AndShare
-//
-//  Created by USER on 2018/05/03.
-//  Copyright © 2018年 Hiliberate. All rights reserved.
-//
-
 import RxSwift
 import RxCocoa
 
@@ -35,7 +27,7 @@ class ChatViewModel {
         dataMessageRx = messageModel.messagesRx()
         
         //スクロール 上まで到達した時
-        // subscribe はイベントの購読を行う。（＝ここで受信する）driveはsubscriveと同等(?)
+        // driveはsubscribeと同様、イベントの購読を行う。（＝ここで受信する）
         scrollEndComing.asDriver()
             .drive(onNext: { bool in
                 if (bool) {

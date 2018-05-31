@@ -44,7 +44,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITextViewDeleg
     
     func createUI() {
         self.navigationController?.isNavigationBarHidden = true
-        self.view.backgroundColor = cBackGround
+        self.view.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.92, alpha: 1.0)
         
         //**チャット UIView
         let frameUIView = CGRect(x: 0, y : 0, width: self.view.frame.width, height: self.view.frame.height)
@@ -64,7 +64,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITextViewDeleg
         //**入力 UIView
         let frameUIViewInput = CGRect(x: 0, y : chatUIView.frame.height - 50, width: self.view.frame.width, height: 50)
         inputUIView = UIView(frame: frameUIViewInput)
-        inputUIView.backgroundColor = cBackGround
+        inputUIView.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.92, alpha: 1.0)
         chatUIView.addSubview(inputUIView)
         
         //テキスト
@@ -78,7 +78,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITextViewDeleg
         //送信ボタン
         sendButton = UIButton(frame: CGRect(x: self.view.frame.width - 60,y: 5,width: 50,height:40))
         sendButton.setTitle("send", for: .normal)
-        sendButton.backgroundColor = cRed
+        sendButton.backgroundColor = UIColor(hue: 0, saturation: 0.73, brightness: 0.88, alpha: 1.0)
         sendButton.layer.cornerRadius = 10
         inputUIView.addSubview(sendButton)
         
@@ -119,7 +119,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITextViewDeleg
                         self.messageTableView.scrollToRow(at: IndexPath(row: 20, section: 0), at: UITableViewScrollPosition.top, animated: false)
                     }
                 }
-                //ActivityIndicator.stopAnimating()
             })
             .disposed(by: disposeBag)
         
