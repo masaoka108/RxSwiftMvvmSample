@@ -27,17 +27,6 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
 
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Differentiator
-    - RxBlocking
-    - RxCocoa
-    - RxDataSources
-    - RxGesture
-    - RxKeyboard
-    - RxSwift
-    - RxTest
-
 SPEC CHECKSUMS:
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   RxBlocking: f6054985901412fc8c02daa84e92d4ba68c61389
@@ -50,4 +39,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 59ebe1a72357ad7984d9d1a196eba842f0b6c3bc
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0
