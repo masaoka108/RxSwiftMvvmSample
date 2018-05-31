@@ -1,14 +1,14 @@
-#RxSwiftMvvmSample
-====
+# RxSwiftMvvmSample  
 <img src="https://github.com/okamok/RxSwiftMvvmSample/blob/feature/media/RxSwiftMVVMsample.gif" width="300px">
-## Overview
+
+## Overview  
 This is sample project for RxSwift + MVVM
 
 Simple chat UI.  
 Auto load when scroll to the top.  
 You can add new message by tap SEND button.  
 Text field UI isn't hide by keyboard.  
-  
+
 ## Get started
 
 1.execute below command at project root.  
